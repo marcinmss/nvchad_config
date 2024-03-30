@@ -1,7 +1,8 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    lazy = false,
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -20,8 +21,12 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+
+        -- Packages for lua
         "lua-language-server",
         "stylua",
+
+        -- Packages for html and ccs development
         "html-lsp",
         "css-lsp",
 
