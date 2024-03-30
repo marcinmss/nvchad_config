@@ -61,4 +61,9 @@ return {
       return require "configs.null-ls"
     end,
   },
+
+  {
+    "mbbill/undotree",
+    lazy = false,
+  },
 }
