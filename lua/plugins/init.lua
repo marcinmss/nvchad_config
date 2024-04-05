@@ -29,12 +29,16 @@ return {
         -- Packages for html and ccs development
         "html-lsp",
         "css-lsp",
+        "prettier",
 
         -- Packages for python
         "pyright",
         "mypy",
         "ruff",
         "black",
+
+        -- Packages for sql
+        "sqlfluff",
       },
     },
   },
@@ -56,7 +60,7 @@ return {
 
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = { "python" },
+    ft = { "python", "sql" },
     opts = function()
       return require "configs.null-ls"
     end,

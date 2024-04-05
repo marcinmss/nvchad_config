@@ -22,6 +22,12 @@ lspconfig.pyright.setup {
   filetypes = { "python" },
 }
 
+lspconfig.docker_compose_language_service.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "yaml" },
+}
+
 -- typescript
 lspconfig.tsserver.setup {
   on_attach = on_attach,
