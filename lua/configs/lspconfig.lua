@@ -28,9 +28,15 @@ lspconfig.docker_compose_language_service.setup {
   filetypes = { "yaml" },
 }
 
--- typescript
-lspconfig.tsserver.setup {
+lspconfig.texlab.setup {
   on_attach = on_attach,
-  on_init = on_init,
   capabilities = capabilities,
+  filetypes = { "tex" },
 }
+
+-- typescript
+-- lspconfig.tsserver.setup {
+--   on_attach = on_attach,
+--   on_init = on_init,
+--   capabilities = capabilities,
+-- }
