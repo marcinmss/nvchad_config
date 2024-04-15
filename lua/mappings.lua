@@ -4,7 +4,7 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("n", "<leader>u", "<cmd> UndotreeToggle <cr>")
 
@@ -15,4 +15,8 @@ map("n", "<C-u>", "<C-u>zz")
 -- better search terms
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+-- Mappings for vimtex
+map("n", "<leader>lc", "<cmd> VimtexCompile <cr>")
+map("n", "<leader>lv", "<cmd> VimtexView <cr>")
+map("n", "<leader>ls", "<cmd> VimtexStop <cr>")
