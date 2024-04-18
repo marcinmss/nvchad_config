@@ -54,6 +54,7 @@ return {
         "css",
         "python",
         "yaml",
+        "python",
       },
     },
   },
@@ -69,5 +70,12 @@ return {
   {
     "mbbill/undotree",
     lazy = false,
+  },
+  {
+    "Vigemus/iron.nvim",
+    ft = { "python" },
+    init = function()
+      return require "configs.iron-nvim"
+    end,
   },
 }
