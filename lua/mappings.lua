@@ -22,7 +22,7 @@ map("n", "<leader>lv", "<cmd> VimtexView <cr>")
 map("n", "<leader>ls", "<cmd> VimtexStop <cr>")
 
 -- Mapping for lazygit
-map({ "n", "v", "t" }, "<A-i>", function()
+map({ "n", "v", "t" }, "<A-o>", function()
   require("nvchad.term").toggle {
     pos = "float",
     id = "floa",
