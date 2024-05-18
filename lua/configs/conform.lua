@@ -4,6 +4,7 @@ local options = {
     python = { "black" },
     -- css = { "prettier" },
     -- html = { "prettier" },
+    json = { "prettier" },
     yaml = { "prettier" },
     sql = { "sqlfluff" },
     tex = { "latexindent" },
