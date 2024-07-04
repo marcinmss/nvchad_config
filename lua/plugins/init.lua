@@ -17,6 +17,14 @@ return {
     end,
   },
 
+  -- Live Server Plugin
+  {
+    "barrett-ruth/live-server.nvim",
+    -- build = "pnpm add -g live-server",
+    cmd = { "LiveServerStart", "LiveServerStop" },
+    config = true,
+  },
+
   {
     "williamboman/mason.nvim",
     opts = {
@@ -76,6 +84,15 @@ return {
     ft = { "python" },
     init = function()
       return require "configs.iron-nvim"
+    end,
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "html",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
     end,
   },
 }
