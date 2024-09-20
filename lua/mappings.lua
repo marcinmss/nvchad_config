@@ -16,16 +16,21 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
--- Mappings for vimtex
-map("n", "<leader>lc", "<cmd> VimtexCompile <cr>")
-map("n", "<leader>lv", "<cmd> VimtexView <cr>")
-map("n", "<leader>ls", "<cmd> VimtexStop <cr>")
+-- Mappings for Dap
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>")
+map("n", "<leader>dn", "<cmd> DapNew <CR>")
+map("n", "<leader>dt", "<cmd> DapTerminate <CR>")
+map("n", "<leader>dso", "<cmd> DapStepOver <CR>")
+
+map("n", "<leader>dpr", function()
+  require("dap-python").test_method()
+end)
 
 -- Mapping for lazygit
 map({ "n", "v", "t" }, "<A-o>", function()
   require("nvchad.term").toggle {
     pos = "float",
-    id = "floa",
+    id = "float",
     cmd = "lazygit",
     float_opts = { border = "double", width = 0.99, height = 0.90, row = 0.1, col = 0.25 },
   }
