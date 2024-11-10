@@ -22,6 +22,11 @@ map("n", "<leader>dn", "<cmd> DapNew <CR>")
 map("n", "<leader>dt", "<cmd> DapTerminate <CR>")
 map("n", "<leader>dso", "<cmd> DapStepOver <CR>")
 
+map("n", "<leader>pw", function()
+  local picked_window_id = require("window-picker").pick_window { hint = "floating-big-letter" }
+  print(vim.fn.win_gotoid(picked_window_id))
+end)
+
 map("n", "<leader>dpr", function()
   require("dap-python").test_method()
 end)
