@@ -3,6 +3,12 @@ return {
     "mfussenegger/nvim-dap",
   },
   {
+    "mattn/emmet-vim",
+    ft = {
+      "html",
+    },
+  },
+  {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     config = function()
@@ -105,6 +111,7 @@ return {
         "htmx-lsp",
         "css-lsp",
         "prettier",
+        "tailwindcss-language-server"
 
         -- Packages for python
         "pyright",

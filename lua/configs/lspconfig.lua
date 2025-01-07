@@ -38,6 +38,12 @@ lspconfig.pyright.setup {
   filetypes = { "python" },
 }
 
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  -- single_file_support = true,
+}
+
 lspconfig.docker_compose_language_service.setup {
   on_attach = on_attach,
   capabilities = capabilities,
